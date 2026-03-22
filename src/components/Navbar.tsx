@@ -28,7 +28,7 @@ const Navbar=() => {
                 <Link href="/menu">Menu</Link>
                 <Link href="/">Contact</Link>
                 {
-                    isAdmin && <Link href="/Admin">Admin</Link>
+                    isAdmin && <Link href="/admin">Admin</Link>
                 }
 
                 {

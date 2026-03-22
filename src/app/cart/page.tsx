@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useCart } from "@/app/context/CartContext";
+import Link from "next/link";
 
 const CartPage = () => {
   const { cartItems, removeFromCart, changeQuantity } = useCart();
@@ -83,7 +84,7 @@ const CartPage = () => {
               onClick={() => handleRemoveItem(item.id)}
               className="cursor-pointer text-red-500 hover:text-red-700"
             >
-              X
+              
             </button>
           </div>
         ))}
@@ -109,9 +110,9 @@ const CartPage = () => {
           <span className="">TOTAL(INCL. VAT)</span>
           <span className="font-bold">${total.toFixed(2)}</span>
         </div>
-        <button className="bg-red-500 text-white p-3 rounded-md w-1/2 self-end hover:bg-red-600 transition-colors">
+       <Link href={"/Checkout"}><button className="bg-red-500 text-white p-3 rounded-md w-1/2 self-end hover:bg-red-600 transition-colors">
           CHECKOUT
-        </button>
+        </button></Link> 
       </div>
     </div>
   );

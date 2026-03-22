@@ -44,7 +44,7 @@ type Product = {
         },
         {
           title: "Medium",
-          additionalPrice: 4,
+          additionalPrice: 4, 
         },
         {
           title: "Large",
